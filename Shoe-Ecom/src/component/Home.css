@@ -1,0 +1,16 @@
+.card-image1 img {
+  width: 600px;
+  height: 500px;
+  border-radius: 10px;
+}
+.card-image2 img {
+  width: 600px;
+  height: 500px;
+  margin-left: 40px;
+  border-radius: 10px;
+}
+.f-row {
+  display: flex;
+  margin-top: -550px;
+  margin-left: 40px;
+}

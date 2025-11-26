@@ -1,14 +1,14 @@
 .nav-bar {
   top: 0rem;
   display: flex;
-  margin-bottom: 100rem;
+  margin-bottom: 40rem;
 }
 .nav-bar a {
   margin-left: 2rem;
 }
 .nav-items {
   margin-left: 18rem;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 
 .nav-bar {
