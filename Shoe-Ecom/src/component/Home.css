@@ -1,16 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+.f-row {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+}
 .card-image1 img {
-  width: 600px;
-  height: 500px;
+  width: 100%;
+  max-width: 550px;
   border-radius: 10px;
 }
 .card-image2 img {
-  width: 600px;
-  height: 500px;
-  margin-left: 40px;
+  width: 100%;
+  max-width: 500px;
+  height: 282px;
   border-radius: 10px;
 }
-.f-row {
+.s-row {
   display: flex;
-  margin-top: -550px;
-  margin-left: 40px;
+  flex-direction: column;
+}
+
+/* DISCOUNT SECTION */
+.discount {
+  background: #f7f6db;
+  width: 80%;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* vertically centers */
+}
+
+.coupen h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.coupen p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* Email Button */
+.btn-1 button {
+  padding: 12px 30px;
+  font-size: 16px;
+  border: none;
+  background: #c77400;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-1 button:hover {
+  background: #a56300;
+}
+.view-all {
+  margin-right: 70px;
+}
+.card-image3 img {
+  width: 300px;
+  height: 100%;
+  display: flex;
+  border-radius: 5px;
+}
+.main-card {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  padding: 0 10px 30px;
+  box-sizing: border-box;
+}
+
+.product-card {
+  width: 220px;
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.15);
+}
+.shoes-two img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+}
+.column-3 {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  gap: 30px;
+  margin-top: 60px;
+}
+.footer {
+  padding: 40px 60px;
+  border-top: 1px solid #ddd;
+  background: #fff;
+}
+
+.footer-container {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-column p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #444;
+  cursor: pointer;
+}
+
+.footer-column p:hover {
+  color: black;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+.footer-credit {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #777;
+  text-align: center;
+}
+
+.footer-credit span {
+  font-weight: 600;
+  color: black;
+}
+/* ===================== FONT STYLING (ONLY ADDED, DOES NOT AFFECT LAYOUT) ===================== */
+
+/* Global font */
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+/* Discount Section */
+.coupen h1 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.coupen p {
+  font-weight: 400;
+}
+
+/* Button font */
+.btn-1 button {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Product cards */
+.product-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.product-card p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
+}
+
+.product-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* VIEW ALL text */
+.view-all {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Footer styles */
+.footer-column h3 {
+  font-weight: 600;
+}
+
+.footer-column p {
+  font-weight: 400;
+}
+
+.footer-credit span {
+  font-weight: 700;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .f-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .discount {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  /* ===========================
+   RESPONSIVE DESIGN (No overwrite)
+   =========================== */
+
+  /* Tablet */
+  @media (max-width: 992px) {
+    .f-row {
+      flex-direction: column;
+      gap: 25px;
+      padding: 20px;
+    }
+
+    .card-image1 img,
+    .card-image2 img {
+      max-width: 100%;
+    }
+
+    .discount {
+      width: 90%;
+      padding: 25px;
+    }
+
+    .product-container {
+      justify-content: center;
+    }
+
+    .product-card {
+      width: 45%;
+      max-width: 250px;
+    }
+
+    .column-3 {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .footer-container {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 600px) {
+    .discount {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 95%;
+      padding: 20px;
+      gap: 15px;
+    }
+
+    .product-header {
+      flex-direction: column;
+      gap: 5px;
+      text-align: center;
+    }
+
+    .product-container {
+      justify-content: center;
+    }
+
+    .product-card {
+      width: 90%;
+    }
+
+    .column-3 {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      text-align: center;
+    }
+
+    .footer {
+      padding: 30px 20px;
+    }
+  }
+
+  /* Extra small devices */
+  @media (max-width: 400px) {
+    .coupen h1 {
+      font-size: 22px;
+    }
+
+    .btn-1 button {
+      padding: 10px 22px;
+      font-size: 14px;
+    }
+
+    .product-card h3 {
+      font-size: 16px;
+    }
+
+    .product-card p {
+      font-size: 13px;
+    }
+  }
 }

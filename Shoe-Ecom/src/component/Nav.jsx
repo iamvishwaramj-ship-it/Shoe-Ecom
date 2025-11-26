@@ -1,27 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
+import {
+  FaShoppingCart,
+  FaBars,
+  FaTimes,
+  FaUser,
+  FaSearch,
+} from "react-icons/fa";
 import "./Nav.css";
 
-export default function Nav() {
+export default function Navbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <div>
-      <nav className="nav-bar">
-        <h2>Stylish Online Store</h2>
-        <div className="nav-items">
-          <label for="fruit-select"></label>
-          <select name="fruits" id="fruit-select">
-            <option value="grape" selected className="drop-down">
-              Home
-            </option>
-            <option value="apple">Home 1</option>
-            <option value="banana">Home 2</option>
-          </select>
-          <a href="#">Men</a>
-          <a href="#">Women</a>
-          <a href="#">Page</a>
-          <a href="#">Shop</a>
-          <a href="#">Sale</a>
-        </div>
-      </nav>
-    </div>
+    <nav className="navbar">
+      <div className="logo">
+        <Link to="/">
+          <span style={{ color: "red" }}>Stylish</span>Shoes
+        </Link>
+      </div>
+
+      <div
+        className="menu-icon"
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+      >
+        {mobileMenuOpen ? <FaTimes /> : <FaBars />}
+      </div>
+
+      <ul className={mobileMenuOpen ? "nav-links active" : "nav-links"}>
+        <li>
+          <Link to="/" onClick={() => setMobileMenuOpen(false)}>
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/products" onClick={() => setMobileMenuOpen(false)}>
+            Men
+          </Link>
+        </li>
+        <li>
+          <Link to="/about" onClick={() => setMobileMenuOpen(false)}>
+            Women
+          </Link>
+        </li>
+        <li>
+          <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
+            Offer
+          </Link>
+        </li>
+      </ul>
+
+      <div className="nav-icons">
+        <FaSearch className="icon" />
+        <Link to="/account">
+          <FaUser className="icon" />
+        </Link>
+        <Link to="/cart">
+          <FaShoppingCart className="icon" />
+        </Link>
+      </div>
+    </nav>
   );
 }
