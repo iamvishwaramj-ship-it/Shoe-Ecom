@@ -4,6 +4,7 @@ import Products from "./component/Products";
 import StoreProvider from "./component/StoreContext";
 import Cart from "./component/Cart";
 import ProductDetails from "./component/Productdetails";
+import Login from "./component/Login";
 
 
 function App() {
@@ -16,8 +17,7 @@ function App() {
         <Route path="/Products" element={<Products/>} />
         <Route path="/cart" element={<Cart/>} />
         <Route path="/product/:id" element={<ProductDetails/>} />
-
-
+        <Route path="/Login" element={<Login/>} />
       </Routes>
      
     </BrowserRouter>
