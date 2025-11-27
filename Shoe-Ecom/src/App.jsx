@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Nav from "./component/Nav";
+import Nav from "./component/Navbar";
 import Home from "./component/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./component/About";
@@ -13,8 +13,8 @@ function App() {
         <Route path="/women" element={<h1></h1>} />
         <Route path="/offer" element={<h1></h1>} />
       </Routes>
-      <Nav />
-      <Home />
+      {/* <Nav />
+      <Home /> */}
       <About />
     </BrowserRouter>
   );
