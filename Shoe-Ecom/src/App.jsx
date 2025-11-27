@@ -6,6 +6,7 @@ import Products from "./component/Products";
 import StoreProvider from "./component/StoreContext";
 import Cart from "./component/Cart";
 import ProductDetails from "./component/Productdetails";
+import Contact from "./component/Contact";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         </Routes>
         {/* <Nav />
       <Home /> */}
-        <About />
+        {/* <About /> */}
+        <Contact />
       </BrowserRouter>
     </StoreProvider>
   );
