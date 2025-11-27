@@ -2,21 +2,26 @@ import { useState } from "react";
 import Nav from "./component/Navbar";
 import Home from "./component/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import About from "./component/About";
+import Products from "./component/Products";
+import StoreProvider from "./component/StoreContext";
+import Cart from "./component/Cart";
+import ProductDetails from "./component/Productdetails";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<h1></h1>} />
-        <Route path="/men" element={<h1></h1>} />
-        <Route path="/women" element={<h1></h1>} />
-        <Route path="/offer" element={<h1></h1>} />
-      </Routes>
-      {/* <Nav />
+    <StoreProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Products" element={<Products />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+        </Routes>
+        {/* <Nav />
       <Home /> */}
-      <About />
-    </BrowserRouter>
+        <About />
+      </BrowserRouter>
+    </StoreProvider>
   );
 }
 
