@@ -2,6 +2,7 @@ import { useState } from "react";
 import Nav from "./component/Nav";
 import Home from "./component/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import About from "./component/About";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       </Routes>
       <Nav />
       <Home />
+      <About />
     </BrowserRouter>
   );
 }

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
 import {
   FaShoppingCart,
   FaBars,
@@ -9,18 +8,21 @@ import {
   FaSearch,
 } from "react-icons/fa";
 import "./Nav.css";
+import logo from "../assets/logo.png"; // <-- correct import
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <nav className="navbar">
+      {/* Logo */}
       <div className="logo">
         <Link to="/">
-          <span style={{ color: "red" }}>Stylish</span>Shoes
+          <img src={logo} alt="logo" /> {/* <-- correct usage */}
         </Link>
       </div>
 
+      {/* Mobile Menu Icon */}
       <div
         className="menu-icon"
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -28,6 +30,7 @@ export default function Navbar() {
         {mobileMenuOpen ? <FaTimes /> : <FaBars />}
       </div>
 
+      {/* Nav Links */}
       <ul className={mobileMenuOpen ? "nav-links active" : "nav-links"}>
         <li>
           <Link to="/" onClick={() => setMobileMenuOpen(false)}>
@@ -36,21 +39,22 @@ export default function Navbar() {
         </li>
         <li>
           <Link to="/products" onClick={() => setMobileMenuOpen(false)}>
-            Men
+            Product
           </Link>
         </li>
         <li>
           <Link to="/about" onClick={() => setMobileMenuOpen(false)}>
-            Women
+            About
           </Link>
         </li>
         <li>
           <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
-            Offer
+            Contact
           </Link>
         </li>
       </ul>
 
+      {/* Icons */}
       <div className="nav-icons">
         <FaSearch className="icon" />
         <Link to="/account">
