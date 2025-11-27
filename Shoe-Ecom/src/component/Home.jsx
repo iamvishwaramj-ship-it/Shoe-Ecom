@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const products = [
   {
@@ -42,6 +43,8 @@ const products = [
 
 export default function Home() {
   return (
+    <>
+     <Navbar/>
     <div>
       {/* Top Images */}
       <div className="f-row">
@@ -182,5 +185,6 @@ export default function Home() {
         </p>
       </footer>
     </div>
+     </>
   );
 }

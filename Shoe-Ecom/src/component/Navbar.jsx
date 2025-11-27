@@ -8,7 +8,9 @@ import {
   FaSearch,
 } from "react-icons/fa";
 import "./Nav.css";
-import logo from "../assets/logo.png"; // <-- correct import
+import logo from "../assets/logo.png"; 
+import Cart from "./Cart";
+
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -60,9 +62,10 @@ export default function Navbar() {
         <Link to="/account">
           <FaUser className="icon" />
         </Link>
-        <Link to="/cart">
-          <FaShoppingCart className="icon" />
+        <Link to="/cart" >
+          <FaShoppingCart className="icon"  />
         </Link>
+        
       </div>
     </nav>
   );
