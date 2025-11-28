@@ -51,6 +51,10 @@ export default function StoreProvider({ children }) {
   function logout() {
     setUser(null);
   }
+  function buyNow() {
+    setUser(null);
+    
+  }
 
   return (
     <StoreContext.Provider
@@ -62,7 +66,7 @@ export default function StoreProvider({ children }) {
         removeFromCart,
         changeQty,
         login,
-        logout
+        buyNow
       }}
     >
       {children}

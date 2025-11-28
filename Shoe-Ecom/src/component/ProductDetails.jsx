@@ -22,6 +22,7 @@ export default function ProductDetails() {
       <div className="details-info">
         <h1>{product.title}</h1>
         <h1 className="name">Name:{product.name}</h1>
+        <h2 className="brand">Brand:{product.brand}</h2>
         <h1 className="category">{product.category}</h1>
         <h2 className="price">Price:₹{product.price}</h2>
         <h2 className="Rating">Rating:{product.rating}</h2>

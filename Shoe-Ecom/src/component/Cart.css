@@ -1,5 +1,24 @@
+.cart-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  background: #f8f8f8;
+}
+
+.container {
+  width: 550px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.12);
+}
+
+
+
 .cart-item {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 18px;
   padding: 14px;
@@ -28,7 +47,7 @@
 }
 
 .remove-btn {
-  background: #ff4d4d;
+  background-color: red;
   border: none;
   color: white;
   padding: 7px 12px;
@@ -43,7 +62,7 @@
 
 .checkout-btn {
   padding: 10px 22px;
-  background: #4caf50;
+  background-color: rgb(0, 243, 0);
   color: white;
   border: none;
   border-radius: 6px;

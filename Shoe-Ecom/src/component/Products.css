@@ -87,7 +87,7 @@ aside {
   background: #f7f7f7;
   height: 100vh;
   position: sticky;
-  top: 0;
+  top: 50px;
 }
 
 main.container {

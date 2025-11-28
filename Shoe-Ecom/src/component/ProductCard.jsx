@@ -16,6 +16,7 @@ export default function ProductCard({ product }){
       <h4>₹{product.price}</h4>
       <h4 className='h3'>Rating:{product.rating}</h4>
       <button onClick={()=>addToCart(product)}>Add to Cart</button>
+    
     </div>
   );
 }

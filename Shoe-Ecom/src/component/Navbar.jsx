@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   FaShoppingCart,
@@ -10,10 +10,12 @@ import {
 import "./Nav.css";
 import logo from "../assets/logo.png"; 
 import Cart from "./Cart";
+import { StoreContext } from "./StoreContext";
 
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { cart } = useContext(StoreContext);
 
   return (
     <nav className="navbar">
@@ -58,12 +60,11 @@ export default function Navbar() {
 
       {/* Icons */}
       <div className="nav-icons">
-        <FaSearch className="icon" />
-        <Link to="/account">
+        <Link to="/login">
           <FaUser className="icon" />
         </Link>
         <Link to="/cart" >
-          <FaShoppingCart className="icon"  />
+          <FaShoppingCart className="icon"  />({cart.reduce((s,i)=>s+i.qty,0)})
         </Link>
         
       </div>
