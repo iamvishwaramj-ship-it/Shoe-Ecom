@@ -1,5 +1,5 @@
 import React from "react";
-import "../component/Contact.css"; // <-- Correct path
+import "../component/Contact.css"; 
 import Navbar from "../component/Navbar";
 
 export default function Contact() {
