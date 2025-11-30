@@ -46,7 +46,6 @@ export default function Home() {
     <>
       <Navbar />
       <div>
-        {/* Top Images */}
         <div className="f-row">
           <div className="card-image1">
             <img
@@ -70,7 +69,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Discount Section */}
         <div className="discount">
           <div className="coupen">
             <h1>10% OFF Discount Coupons</h1>
@@ -82,13 +80,11 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Featured Products */}
         <div className="product-header">
           <h2>FEATURED PRODUCTS</h2>
           <h3 className="view-all">VIEW ALL</h3>
         </div>
 
-        {/* Product Cards */}
         <div className="product-container">
           {products.map((item) => (
             <div className="product-card" key={item.id}>

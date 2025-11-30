@@ -29,7 +29,6 @@ export default function About() {
     <div>
       <Navbar />
 
-      {/* HERO SECTION */}
       <section className="about-hero">
         <img src={hero} className="hero-bg" alt="background" />
         <div className="hero-overlay"></div>
@@ -40,15 +39,13 @@ export default function About() {
         </div>
       </section>
 
-      {/* TEXT SECTION */}
       <section className="about-text-section">
         <p>
-          "Travel is for everyone. With Stylish Online Store, it opens our eyes to
-          the world and helps us discover more about ourselves."
+          "Travel is for everyone. With Stylish Online Store, it opens our eyes
+          to the world and helps us discover more about ourselves."
         </p>
       </section>
 
-      {/* Cards Section */}
       <div className="about-cards">
         <div className="card">
           <h3>Who We Are</h3>
@@ -82,7 +79,6 @@ export default function About() {
         </p>
 
         <div className="team-container">
-          {/* Team Member 1 */}
           <div className="team-member">
             <img
               src="https://i.pravatar.cc/150?img=1"
@@ -93,7 +89,6 @@ export default function About() {
             <p>Front-End Developer</p>
           </div>
 
-          {/* Team Member 2 */}
           <div className="team-member">
             <img
               src="https://i.pravatar.cc/150?img=5"
@@ -104,7 +99,6 @@ export default function About() {
             <p>UI/UX Designer</p>
           </div>
 
-          {/* Team Member 3 */}
           <div className="team-member">
             <img
               src="https://i.pravatar.cc/150?img=8"
@@ -117,7 +111,6 @@ export default function About() {
         </div>
       </div>
 
-      {/* HAPPY CLIENTS SECTION */}
       <div className="clients-section">
         <h2>Happy Clients</h2>
         <p className="clients-subtitle">
