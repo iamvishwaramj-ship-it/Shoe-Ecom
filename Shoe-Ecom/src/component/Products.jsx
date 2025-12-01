@@ -35,8 +35,7 @@ export default function Products() {
       <main className="container">
         <h1 className="page-title">
           {category === "all"
-            ? "All Shoes": category === "men"? "Men Shoes": "Women Shoes"}
-           
+            ? "All Shoes": category === "men"? "Men Shoes": "Women Shoes"} 
         </h1>
 
         <div className="grid">
@@ -46,6 +45,15 @@ export default function Products() {
         </div>
       </main>
       </div>
+
+
+
+
+
+
+
+
+      
     </>
   );
 }

@@ -1,73 +1,105 @@
+/* ProductDetails.css */
+
 .details-container {
-  max-width: 1200px;
-  margin: 40px auto;
   display: flex;
   gap: 40px;
+  max-width: 900px;
+  margin: 50px auto;
   padding: 20px;
+  flex-wrap: wrap;
+  background: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .details-img {
   flex: 1;
+  min-width: 300px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
+
 .details-img img {
   width: 100%;
-  max-width: 400px;
-  height: 420px;
-  object-fit: contain;
+  max-width: 500px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .details-info {
   flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.details-info h1 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 12px;
+.details-info h1,
+.details-info h2,
+.details-info p {
+  margin: 4px ;
 }
 
-.category {
-  color: #777;
-  font-size: 16px;
-  margin-bottom: 8px;
-  text-transform: capitalize;
+.details-info .name,
+.details-info .brand,
+.details-info .category,
+.details-info .price,
+.details-info .Rating {
+  font-weight: 600;
 }
 
-.price {
-  color: #ff5722;
-  font-size: 28px;
-  font-weight: 700;
-  margin: 12px 0 20px;
+.details-info .category{
+  color: #555;
+}
+.details-info .Rating
+{
+color: gold;
 }
 
-.desc {
-  font-size: 17px;
-  color: #444;
-  margin-bottom: 25px;
-  line-height: 1.6;
+.details-info .desc {
+  margin-top: 12px;
+  line-height: 1.5;
+  color: #555;
 }
 
 .details-info button {
-  background: #007bff;
-  border: none;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #0066ff;
   color: #fff;
-  padding: 14px 22px;
-  margin-bottom: 10px;
-  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  border-radius: 8px;
-  transition: 0.25s;
+  transition: 0.2s;
 }
+
 .details-info button:hover {
-  background: #0056b3;
+  background-color: #0051cc;
 }
 
 /* Responsive */
 @media (max-width: 900px) {
   .details-container {
     flex-direction: column;
-    text-align: center;
+    padding: 20px 15px;
+  }
+
+  .details-img img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .details-info button {
+    width: 100%;
+    padding: 14px 0;
+  }
+
+  .details-info {
+    gap: 10px;
   }
 }

@@ -8,13 +8,13 @@ export default function ProductCard({ product }){
   const { addToCart } = useContext(StoreContext);
   return (
 <div className="product-card">
-            <Link to={`/product/${product.id}`}>
+  <div className='img-box'>
+<Link to={`/product/${product.id}`}>
 <img src={product.image} alt={product.title} />
-</Link>
-      <h1>{product.title}</h1>
-      <p className="small-muted">{product.name}</p>
-      <h4>₹{product.price}</h4>
-      <h4 className='h3'>Rating:{product.rating}</h4>
+</Link></div>
+      <h4 className="small-muted">{product.name}</h4>
+      <h4 className='price'>₹{product.price}</h4>
+      <h4 className='rating'>Rating:{product.rating}</h4>
       <button onClick={()=>addToCart(product)}>Add to Cart</button>
     
     </div>
