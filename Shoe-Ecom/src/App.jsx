@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Products from "./component/Products";
 import StoreProvider from "./component/StoreContext";
 import Cart from "./component/Cart";
-import ProductDetails from "./component/Productdetails";
+import ProductDetails from "./component/ProductDetails";
 import Contact from "./component/Contact";
 import About from "./component/About";
 import Login from "./component/Login";
