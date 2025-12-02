@@ -1,50 +1,12 @@
 import React from "react";
 import "./Home.css";
-import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Navbar from "./Navbar";
-
-const products = [
-  {
-    id: 1,
-    name: "Shoe 1",
-    img: "https://themewagon.github.io/stylish/images/card-item1.jpg",
-    description: "Running shoes for men",
-    price: "$99",
-  },
-  {
-    id: 2,
-    name: "Shoe 2",
-    img: "https://themewagon.github.io/stylish/images/card-item2.jpg",
-    description: "Comfortable and durable",
-    price: "$89",
-  },
-  {
-    id: 3,
-    name: "Shoe 3",
-    img: "https://themewagon.github.io/stylish/images/card-item3.jpg",
-    description: "Lightweight running shoes",
-    price: "$120",
-  },
-  {
-    id: 4,
-    name: "Shoe 4",
-    img: "https://themewagon.github.io/stylish/images/card-item4.jpg",
-    description: "Premium quality",
-    price: "$150",
-  },
-  {
-    id: 5,
-    name: "Shoe 5",
-    img: "https://themewagon.github.io/stylish/images/card-item5.jpg",
-    description: "Stylish & durable",
-    price: "$110",
-  },
-];
 
 export default function Home() {
   return (
     <>
       <Navbar />
+
       <div>
         <div className="f-row">
           <div className="card-image1">
@@ -53,6 +15,7 @@ export default function Home() {
               alt=""
             />
           </div>
+
           <div className="s-row">
             <div className="card-image2">
               <img
@@ -60,6 +23,7 @@ export default function Home() {
                 alt=""
               />
             </div>
+
             <div className="card-image2">
               <img
                 src="https://themewagon.github.io/stylish/images/card-image2.jpg"
@@ -84,17 +48,30 @@ export default function Home() {
           <h2>FEATURED PRODUCTS</h2>
           <h3 className="view-all">VIEW ALL</h3>
         </div>
-
-        <div className="product-container">
-          {products.map((item) => (
-            <div className="product-card" key={item.id}>
-              <img src={item.img} alt={item.name} />
-              <h3>{item.name}</h3>
-              <p>{item.description}</p>
-              <h4>{item.price}</h4>
-            </div>
-          ))}
+        <div className="shoe-1">
+          <img
+            src="https://themewagon.github.io/stylish/images/card-item1.jpg"
+            alt=""
+          />
+          <img
+            src="https://themewagon.github.io/stylish/images/card-item2.jpg"
+            alt=""
+          />
+          <img
+            src="https://themewagon.github.io/stylish/images/card-item3.jpg"
+            alt=""
+          />
+          <img
+            src="https://themewagon.github.io/stylish/images/card-item4.jpg"
+            alt=""
+          />
+          <img
+            src="https://themewagon.github.io/stylish/images/card-item5.jpg"
+            alt=""
+          />
         </div>
+
+        {/* COLUMN SECTION FIXED HERE */}
         <div className="column-3">
           <div className="shoes-two">
             <img
@@ -109,6 +86,7 @@ export default function Home() {
             />
           </div>
         </div>
+
         <footer className="footer">
           <div className="footer-container">
             <div className="footer-column">
