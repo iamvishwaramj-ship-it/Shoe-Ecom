@@ -71,7 +71,6 @@ export default function Home() {
           />
         </div>
 
-        {/* COLUMN SECTION FIXED HERE */}
         <div className="column-3">
           <div className="shoes-two">
             <img

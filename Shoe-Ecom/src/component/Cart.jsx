@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { StoreContext } from "./StoreContext";
 import "./Cart.css"
 import { useEffect } from "react";
+import Navbar from "./Navbar";
 
 export default function Cart() {
   const { cart, removeFromCart, changeQty } = useContext(StoreContext);
@@ -17,6 +18,8 @@ export default function Cart() {
 
 
   return (
+  <>
+  <Navbar/>
     <div className="cart-wrapper">
       <main className="container">
         <h1 className="page-title">Your Cart</h1>
@@ -27,7 +30,7 @@ export default function Cart() {
             <div style={{ flex: 1 }}>
               <h3 style={{ margin: "0 0 6px" }}>{item.title}</h3>
               <p className="small-muted">₹{item.price}</p>
-              <div style={{ display: "flex", gap: 8, alignItems: "center", marginTop: 8 }}>
+              <div className="product-count" >
                 <input
                   className="input"
                   type="number"
@@ -36,7 +39,6 @@ export default function Cart() {
                   onChange={(e) =>
                     changeQty(item.id, Math.max(1, Number(e.target.value)))
                   }
-                  style={{ width: 80 }}
                 />
                 <button className="remove-btn" onClick={() => removeFromCart(item.id)}>Remove</button>
               </div>
@@ -58,5 +60,6 @@ export default function Cart() {
         )}
       </main>
     </div>
+    </>
   );
 }

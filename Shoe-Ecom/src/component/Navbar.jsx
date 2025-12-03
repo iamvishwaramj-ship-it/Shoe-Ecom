@@ -5,7 +5,6 @@ import {
   FaBars,
   FaTimes,
   FaUser,
-  FaSearch,
 } from "react-icons/fa";
 import "./Nav.css";
 import logo from "../assets/logo.png"; 
@@ -19,14 +18,12 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      {/* Logo */}
       <div className="logo">
         <Link to="/">
-          <img src={logo} alt="logo" /> {/* <-- correct usage */}
+          <img src={logo} alt="logo" /> 
         </Link>
       </div>
 
-      {/* Mobile Menu Icon */}
       <div
         className="menu-icon"
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -34,7 +31,6 @@ export default function Navbar() {
         {mobileMenuOpen ? <FaTimes /> : <FaBars />}
       </div>
 
-      {/* Nav Links */}
       <ul className={mobileMenuOpen ? "nav-links active" : "nav-links"}>
         <li>
           <Link to="/" onClick={() => setMobileMenuOpen(false)}>
@@ -58,7 +54,6 @@ export default function Navbar() {
         </li>
       </ul>
 
-      {/* Icons */}
       <div className="nav-icons">
         <Link to="/login">
           <FaUser className="icon" />

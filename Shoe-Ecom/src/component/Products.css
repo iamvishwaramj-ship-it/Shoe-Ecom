@@ -77,25 +77,97 @@ main.container {
   gap: 26px;
 }
 
+.filter-toggle {
+  display: none;
+}
+ 
+
+  .close-btn:hover {
+    color: #000;
+    transform: scale(1.1);
+  }
+
+@media (max-width: 900px) {
+  .filter-toggle {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #111;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 12px;
+    cursor: pointer;
+    height: fit-content;
+  }
+  aside {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    z-index: 1001;
+    height: fit-content;
+  }
+
+  aside.open {
+    transform: translateX(0); 
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+    z-index: 1000;
+  }
+
+  .sidebar-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .close-btn {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 6px;
+    float: right;
+    color: #444;
+    transition: 0.2s;
+  }
+}
+
+@media (min-width: 901px) {
+  .close-btn,
+  .filter-toggle,
+  .sidebar-overlay {
+    display: none;
+  }
+}
 
 
 
-/* Tablet */
+
+
 @media (max-width: 1024px) {
   .layout {
-    flex-direction: column;
     padding: 20px 15px;
   }
 
   aside {
-    width: 100%;
-    position: relative;
+    width: 25%;
     top: 0;
     margin-bottom: 20px;
   }
+  main .container{
+    width: 100%;
+  }
 
   .grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+   
     gap: 20px;
   }
 
@@ -104,16 +176,26 @@ main.container {
   }
 }
 
-/* Mobile */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   aside ul li {
     padding: 10px 8px;
     font-size: 14px;
   }
+    aside h1 {
+      font-size: 20px;
+    }
+    .product-card{
+      margin-left: 30px;
+    }
 
   .grid {
-    grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 15px;
+  }
+
+   main .container{
+    width: 100%;
+   
   }
 
   .page-title {
@@ -121,7 +203,54 @@ main.container {
   }
 
   .layout {
-    padding: 15px 10px;
+    padding: 5px;
   }
 }
+@media (max-width: 770px) {
+  .product-card{
+    width: 75%;
+  }
+  .grid {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+  }
+}
+
+@media (max-width: 770px) {
+  aside ul li {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+    aside h1 {
+      font-size: 20px;
+    }
+
+  .grid {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+  }
+
+   main .container{
+    width: 100%;
+   
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  .layout {
+    padding: 5px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 

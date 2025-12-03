@@ -1,6 +1,6 @@
 import React from "react";
-import "../component/Contact.css";
-import Navbar from "../component/Navbar";
+import "./Contact.css"
+import Navbar from "./Navbar"
 
 export default function Contact() {
   const handleSubmit = (e) => {

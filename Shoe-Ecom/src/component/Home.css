@@ -1,4 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"); */
 
 .f-row {
   display: flex;
@@ -23,7 +22,6 @@
   flex-direction: column;
 }
 
-/* DISCOUNT SECTION */
 .discount {
   background: #f7f6db;
   width: 80%;
@@ -33,7 +31,7 @@
 
   display: flex;
   justify-content: space-between;
-  align-items: center; /* vertically centers */
+  align-items: center; 
 }
 
 .coupen h1 {
@@ -46,7 +44,6 @@
   font-size: 18px;
 }
 
-/* Email Button */
 .btn-1 button {
   padding: 12px 30px;
   font-size: 16px;
@@ -182,14 +179,11 @@
   font-weight: 600;
   color: black;
 }
-/* ===================== FONT STYLING (ONLY ADDED, DOES NOT AFFECT LAYOUT) ===================== */
 
-/* Global font */
 * {
   font-family: "Poppins", sans-serif;
 }
 
-/* Headings */
 h1,
 h2,
 h3,
@@ -198,7 +192,6 @@ h4 {
   font-weight: 600;
 }
 
-/* Discount Section */
 .coupen h1 {
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -208,13 +201,11 @@ h4 {
   font-weight: 400;
 }
 
-/* Button font */
 .btn-1 button {
   font-weight: 500;
   letter-spacing: 0.5px;
 }
 
-/* Product cards */
 .product-card h3 {
   font-size: 18px;
   font-weight: 600;
@@ -232,14 +223,12 @@ h4 {
   color: #000;
 }
 
-/* VIEW ALL text */
 .view-all {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
 }
 
-/* Footer styles */
 .footer-column h3 {
   font-weight: 600;
 }
@@ -252,7 +241,6 @@ h4 {
   font-weight: 700;
 }
 
-/* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .f-row {
     flex-direction: column;
@@ -264,11 +252,7 @@ h4 {
     text-align: center;
     gap: 20px;
   }
-  /* ===========================
-   RESPONSIVE DESIGN (No overwrite)
-   =========================== */
-
-  /* Tablet */
+ 
   @media (max-width: 992px) {
     .f-row {
       flex-direction: column;
@@ -306,7 +290,6 @@ h4 {
     }
   }
 
-  /* Mobile */
   @media (max-width: 600px) {
     .discount {
       flex-direction: column;
@@ -349,7 +332,6 @@ h4 {
     }
   }
 
-  /* Extra small devices */
   @media (max-width: 400px) {
     .coupen h1 {
       font-size: 22px;

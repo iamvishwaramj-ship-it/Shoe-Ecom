@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { StoreContext } from "./StoreContext";
 import "./ProductDetails.css";
+import Navbar from "./Navbar";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -17,11 +18,12 @@ export default function ProductDetails() {
     return <h2 style={{ textAlign: "center" }}>Product not found</h2>;
 
   const handleAddToCart = () => {
-    addToCart(product);       // Add product to cart
-    navigate("/cart");        // Navigate to cart page
+    addToCart(product);      
+    navigate("/cart");        
   };
 
-  return (
+  return (<>
+    <Navbar/>
     <main className="details-container">
       <div className="details-img">
         <img src={product.image} alt={product.title} />
@@ -40,5 +42,6 @@ export default function ProductDetails() {
         <button onClick={handleAddToCart}>Add to Cart</button>
       </div>
     </main>
+    </>
   );
 }
